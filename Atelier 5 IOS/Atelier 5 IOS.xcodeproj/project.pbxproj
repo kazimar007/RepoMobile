@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C039DAF62931085F0096F2D8 /* Atelier_5_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C039DAF52931085F0096F2D8 /* Atelier_5_IOSApp.swift */; };
+		C039DAF82931085F0096F2D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C039DAF72931085F0096F2D8 /* ContentView.swift */; };
+		C039DAFA293108600096F2D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C039DAF9293108600096F2D8 /* Assets.xcassets */; };
+		C039DAFD293108600096F2D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C039DAFC293108600096F2D8 /* Preview Assets.xcassets */; };
+		C039DB07293108600096F2D8 /* Atelier_5_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C039DB06293108600096F2D8 /* Atelier_5_IOSTests.swift */; };
+		C039DB11293108600096F2D8 /* Atelier_5_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C039DB10293108600096F2D8 /* Atelier_5_IOSUITests.swift */; };
+		C039DB13293108600096F2D8 /* Atelier_5_IOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C039DB12293108600096F2D8 /* Atelier_5_IOSUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C039DB03293108600096F2D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C039DAEA2931085F0096F2D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C039DAF12931085F0096F2D8;
+			remoteInfo = "Atelier 5 IOS";
+		};
+		C039DB0D293108600096F2D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C039DAEA2931085F0096F2D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C039DAF12931085F0096F2D8;
+			remoteInfo = "Atelier 5 IOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C039DAF22931085F0096F2D8 /* Atelier 5 IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Atelier 5 IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C039DAF52931085F0096F2D8 /* Atelier_5_IOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atelier_5_IOSApp.swift; sourceTree = "<group>"; };
+		C039DAF72931085F0096F2D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C039DAF9293108600096F2D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C039DAFC293108600096F2D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C039DB02293108600096F2D8 /* Atelier 5 IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Atelier 5 IOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C039DB06293108600096F2D8 /* Atelier_5_IOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atelier_5_IOSTests.swift; sourceTree = "<group>"; };
+		C039DB0C293108600096F2D8 /* Atelier 5 IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Atelier 5 IOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C039DB10293108600096F2D8 /* Atelier_5_IOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atelier_5_IOSUITests.swift; sourceTree = "<group>"; };
+		C039DB12293108600096F2D8 /* Atelier_5_IOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atelier_5_IOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C039DAEF2931085F0096F2D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C039DAFF293108600096F2D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C039DB09293108600096F2D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C039DAE92931085F0096F2D8 = {
+			isa = PBXGroup;
+			children = (
+				C039DAF42931085F0096F2D8 /* Atelier 5 IOS */,
+				C039DB05293108600096F2D8 /* Atelier 5 IOSTests */,
+				C039DB0F293108600096F2D8 /* Atelier 5 IOSUITests */,
+				C039DAF32931085F0096F2D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C039DAF32931085F0096F2D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C039DAF22931085F0096F2D8 /* Atelier 5 IOS.app */,
+				C039DB02293108600096F2D8 /* Atelier 5 IOSTests.xctest */,
+				C039DB0C293108600096F2D8 /* Atelier 5 IOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C039DAF42931085F0096F2D8 /* Atelier 5 IOS */ = {
+			isa = PBXGroup;
+			children = (
+				C039DAF52931085F0096F2D8 /* Atelier_5_IOSApp.swift */,
+				C039DAF72931085F0096F2D8 /* ContentView.swift */,
+				C039DAF9293108600096F2D8 /* Assets.xcassets */,
+				C039DAFB293108600096F2D8 /* Preview Content */,
+			);
+			path = "Atelier 5 IOS";
+			sourceTree = "<group>";
+		};
+		C039DAFB293108600096F2D8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C039DAFC293108600096F2D8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C039DB05293108600096F2D8 /* Atelier 5 IOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				C039DB06293108600096F2D8 /* Atelier_5_IOSTests.swift */,
+			);
+			path = "Atelier 5 IOSTests";
+			sourceTree = "<group>";
+		};
+		C039DB0F293108600096F2D8 /* Atelier 5 IOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C039DB10293108600096F2D8 /* Atelier_5_IOSUITests.swift */,
+				C039DB12293108600096F2D8 /* Atelier_5_IOSUITestsLaunchTests.swift */,
+			);
+			path = "Atelier 5 IOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C039DAF12931085F0096F2D8 /* Atelier 5 IOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C039DB16293108600096F2D8 /* Build configuration list for PBXNativeTarget "Atelier 5 IOS" */;
+			buildPhases = (
+				C039DAEE2931085F0096F2D8 /* Sources */,
+				C039DAEF2931085F0096F2D8 /* Frameworks */,
+				C039DAF02931085F0096F2D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Atelier 5 IOS";
+			productName = "Atelier 5 IOS";
+			productReference = C039DAF22931085F0096F2D8 /* Atelier 5 IOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C039DB01293108600096F2D8 /* Atelier 5 IOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C039DB19293108600096F2D8 /* Build configuration list for PBXNativeTarget "Atelier 5 IOSTests" */;
+			buildPhases = (
+				C039DAFE293108600096F2D8 /* Sources */,
+				C039DAFF293108600096F2D8 /* Frameworks */,
+				C039DB00293108600096F2D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C039DB04293108600096F2D8 /* PBXTargetDependency */,
+			);
+			name = "Atelier 5 IOSTests";
+			productName = "Atelier 5 IOSTests";
+			productReference = C039DB02293108600096F2D8 /* Atelier 5 IOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C039DB0B293108600096F2D8 /* Atelier 5 IOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C039DB1C293108600096F2D8 /* Build configuration list for PBXNativeTarget "Atelier 5 IOSUITests" */;
+			buildPhases = (
+				C039DB08293108600096F2D8 /* Sources */,
+				C039DB09293108600096F2D8 /* Frameworks */,
+				C039DB0A293108600096F2D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C039DB0E293108600096F2D8 /* PBXTargetDependency */,
+			);
+			name = "Atelier 5 IOSUITests";
+			productName = "Atelier 5 IOSUITests";
+			productReference = C039DB0C293108600096F2D8 /* Atelier 5 IOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C039DAEA2931085F0096F2D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					C039DAF12931085F0096F2D8 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					C039DB01293108600096F2D8 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = C039DAF12931085F0096F2D8;
+					};
+					C039DB0B293108600096F2D8 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = C039DAF12931085F0096F2D8;
+					};
+				};
+			};
+			buildConfigurationList = C039DAED2931085F0096F2D8 /* Build configuration list for PBXProject "Atelier 5 IOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C039DAE92931085F0096F2D8;
+			productRefGroup = C039DAF32931085F0096F2D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C039DAF12931085F0096F2D8 /* Atelier 5 IOS */,
+				C039DB01293108600096F2D8 /* Atelier 5 IOSTests */,
+				C039DB0B293108600096F2D8 /* Atelier 5 IOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C039DAF02931085F0096F2D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C039DAFD293108600096F2D8 /* Preview Assets.xcassets in Resources */,
+				C039DAFA293108600096F2D8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C039DB00293108600096F2D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C039DB0A293108600096F2D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C039DAEE2931085F0096F2D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C039DAF82931085F0096F2D8 /* ContentView.swift in Sources */,
+				C039DAF62931085F0096F2D8 /* Atelier_5_IOSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C039DAFE293108600096F2D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C039DB07293108600096F2D8 /* Atelier_5_IOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C039DB08293108600096F2D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C039DB11293108600096F2D8 /* Atelier_5_IOSUITests.swift in Sources */,
+				C039DB13293108600096F2D8 /* Atelier_5_IOSUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C039DB04293108600096F2D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C039DAF12931085F0096F2D8 /* Atelier 5 IOS */;
+			targetProxy = C039DB03293108600096F2D8 /* PBXContainerItemProxy */;
+		};
+		C039DB0E293108600096F2D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C039DAF12931085F0096F2D8 /* Atelier 5 IOS */;
+			targetProxy = C039DB0D293108600096F2D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C039DB14293108600096F2D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C039DB15293108600096F2D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C039DB17293108600096F2D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Atelier 5 IOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Nikolas-D-Amato.Atelier-5-IOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C039DB18293108600096F2D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Atelier 5 IOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Nikolas-D-Amato.Atelier-5-IOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C039DB1A293108600096F2D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Nikolas-D-Amato.Atelier-5-IOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Atelier 5 IOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Atelier 5 IOS";
+			};
+			name = Debug;
+		};
+		C039DB1B293108600096F2D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Nikolas-D-Amato.Atelier-5-IOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Atelier 5 IOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Atelier 5 IOS";
+			};
+			name = Release;
+		};
+		C039DB1D293108600096F2D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Nikolas-D-Amato.Atelier-5-IOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Atelier 5 IOS";
+			};
+			name = Debug;
+		};
+		C039DB1E293108600096F2D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Nikolas-D-Amato.Atelier-5-IOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Atelier 5 IOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C039DAED2931085F0096F2D8 /* Build configuration list for PBXProject "Atelier 5 IOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C039DB14293108600096F2D8 /* Debug */,
+				C039DB15293108600096F2D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C039DB16293108600096F2D8 /* Build configuration list for PBXNativeTarget "Atelier 5 IOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C039DB17293108600096F2D8 /* Debug */,
+				C039DB18293108600096F2D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C039DB19293108600096F2D8 /* Build configuration list for PBXNativeTarget "Atelier 5 IOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C039DB1A293108600096F2D8 /* Debug */,
+				C039DB1B293108600096F2D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C039DB1C293108600096F2D8 /* Build configuration list for PBXNativeTarget "Atelier 5 IOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C039DB1D293108600096F2D8 /* Debug */,
+				C039DB1E293108600096F2D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C039DAEA2931085F0096F2D8 /* Project object */;
+}
