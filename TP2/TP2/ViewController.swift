@@ -14,9 +14,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var labAllLetter1: UILabel!
     @IBOutlet weak var labAllLetter2: UILabel!
     @IBOutlet weak var imgBody: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        loadGame()
+    }
+    
+    func loadGame() {
+        labAllLetter1.text = "A B C D E F G H I J K L M"
+        labAllLetter2.text = "N O P Q R S T U V W X Y Z"
+        imgBody.image = UIImage(named: "manStage1.png")
     }
 
 
