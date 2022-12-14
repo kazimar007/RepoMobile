@@ -7,6 +7,7 @@
 
 import UIKit
 
+var gameController = GameController()
 // TODO: Faire un fichier pour le controller (View Model)
 struct GameData {
     var manStage = 1
@@ -17,6 +18,7 @@ struct GameData {
 
 // TODO: Utiliser l'API pour obtenir un mot
 var wordBank = ["Os", "Marteau", "Atelier", "Ceinture", "Incroyable"]
+//var wordBank = ["eeeeee"]
 
 var theGame = GameData()
 
@@ -43,9 +45,22 @@ class ViewController: UIViewController {
             txfLetterEntry.placeholder = "Entrez une lettre disponible"
             removeTheLetterInAvailable(letter: theLetter.uppercased())
             if isTheLetterInTheWord(letter: theLetter.uppercased()) {
-                // TODO: Marche pas
-                revealTheLetter(letter: theLetter.uppercased())
+                // Lettre trouver
+                updateProgress(letter: theLetter.uppercased())
+                labWordToFind.text = theGame.wordProgress
+                var isCompleted = true
+                for letter in theGame.wordProgress {
+                    if letter == "_" {
+                        isCompleted = false
+                    }
+                }
+                if isCompleted {
+                    // Mot complete
+                    resetGame()
+                    loadGameView()
+                }
             } else {
+                // Mauvaise lettre
                 theGame.manStage += 1
                 if theGame.manStage >= 7 {
                     // TODO: Confirmer s'il veut recommencer
@@ -114,7 +129,7 @@ class ViewController: UIViewController {
         return false
     }
     
-    func revealTheLetter(letter: String) {
+    func updateProgress(letter: String) {
         var letterToAdd = [Character]()
         var indexToAdd = [Int]()
         var index = 0
@@ -131,7 +146,7 @@ class ViewController: UIViewController {
         for progressLetter in theGame.wordProgress {
             if progressLetter != "_" {
                 newString += String(progressLetter)
-            } else if index == indexToAdd[0] {
+            } else if index == indexToAdd[nextIndex] {
                 newString += String(letterToAdd[nextIndex])
                 nextIndex += 1
             } else {
@@ -139,6 +154,7 @@ class ViewController: UIViewController {
             }
             index += 1
         }
+        theGame.wordProgress = newString
     }
 }
 
