@@ -8,18 +8,48 @@
 import Foundation
 
 class APIController {
+    static public func getWord() {
+        let urlString: String = "https://bonhomme.drynish.duckdns.org/getWord"
+        guard let url = URL(string: urlString) else {
+          print("Error: cannot create URL")
+          return
+        }
+        let urlRequest = URLRequest(url: url)
+        
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: urlRequest, completionHandler:
+            { (data: Data?, response:URLResponse?, error:Error?) in
+            if let error = error {
+                print(error)
+            }
+            
+            if let response=response {
+                print(response)
+            }
+            
+            if let data=data {
+                do {
+                    var dataGetWord = try JSONDecoder().decode(DataGetWord.self, from: data)
+                    DispatchQueue.main.async {
+                        theGame.mysteryWord = dataGetWord.word
+                    }
+                }
+                catch{
+                    DispatchQueue.main.async {
+                        theGame.mysteryWord = "Erreur"
+                    }
+                }
+            }
+        })
+        task.resume()
+    }
     
-    
-    // TODO: Envoyer dans une variable global
-    public func getWord() {
+    static public func solveWord() {
         
     }
     
-    public func solveWord() {
-        
-    }
-    
-    public func highScore() {
+    static public func highScore() {
         
     }
 }

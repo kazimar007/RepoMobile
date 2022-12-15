@@ -108,7 +108,8 @@ class GameController {
     func resetGame() {
         theGame.manStage = 1
         theGame.availableLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        theGame.mysteryWord = wordBank.randomElement()!.uppercased()
+        //theGame.mysteryWord = wordBank.randomElement()!.uppercased()
+        APIController.getWord()
         theGame.wordProgress = ""
         for _ in theGame.mysteryWord {
             theGame.wordProgress.append("_")
