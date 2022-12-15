@@ -8,19 +8,6 @@
 import UIKit
 
 var gameController = GameController()
-// TODO: Faire un fichier pour le controller (View Model)
-struct GameData {
-    var manStage = 1
-    var availableLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    var mysteryWord = "Inconnue"
-    var wordProgress = "________"
-}
-
-// TODO: Utiliser l'API pour obtenir un mot
-var wordBank = ["Os", "Marteau", "Atelier", "Ceinture", "Incroyable"]
-//var wordBank = ["eeeeee"]
-
-var theGame = GameData()
 
 class ViewController: UIViewController {
 
@@ -32,48 +19,41 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        resetGame()
+        gameController.resetGame()
         loadGameView()
     }
     
     @IBAction func txfLetterEntryEditingChanged(_ sender: Any) {
-        let theLetter = String(txfLetterEntry.text!.prefix(1))
+        let status = gameController.letterEntry(entry: txfLetterEntry.text!)
         txfLetterEntry.text = ""
         
-        if isLetterAvailable(letter: theLetter.uppercased()) {
-            txfLetterEntry.placeholder = "Entrez une lettre disponible"
-            removeTheLetterInAvailable(letter: theLetter.uppercased())
-            if isTheLetterInTheWord(letter: theLetter.uppercased()) {
-                // Lettre trouver
-                updateProgress(letter: theLetter.uppercased())
-                labWordToFind.text = theGame.wordProgress
-                var isCompleted = true
-                for letter in theGame.wordProgress {
-                    if letter == "_" {
-                        isCompleted = false
-                    }
-                }
-                if isCompleted {
-                    // Mot complete
-                    resetGame()
-                    loadGameView()
-                }
-            } else {
-                // Mauvaise lettre
-                theGame.manStage += 1
-                if theGame.manStage >= 7 {
-                    // TODO: Confirmer s'il veut recommencer
-                }
-            }
+        switch status {
+        case WRONG_LETTER:
             loadGameView()
-        } else {
+            txfLetterEntry.placeholder = "Mauvaise lettre"
+            break
+        case GOOD_LETTER:
+            loadGameView()
+            txfLetterEntry.placeholder = "Bonne lettre"
+            break
+        case LOSE:
+            loadGameView()
+            txfLetterEntry.placeholder = "Vous avez perdu"
+            break
+        case WIN:
+            loadGameView()
+            txfLetterEntry.placeholder = "Vous avez gagne"
+            break
+        case UNAVAILABLE_LETTER:
             txfLetterEntry.placeholder = "La lettre n'est pas disponible"
+            break
+        default:
+            txfLetterEntry.placeholder = "ERREUR 404 :("
+            break
         }
     }
     
     func loadGameView() {
-        // TODO: Verifier quand t'il n'y a pas de lettre dans theGame.availableLetter
         labAllLetter1.text = ""
         labAllLetter2.text = ""
         for letter in theGame.availableLetter {
@@ -90,71 +70,4 @@ class ViewController: UIViewController {
             labWordToFind.text? += String(letter) + " "
         }
     }
-    
-    func resetGame() {
-        theGame.manStage = 1
-        theGame.availableLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        theGame.mysteryWord = wordBank.randomElement()!.uppercased()
-        theGame.wordProgress = ""
-        for _ in theGame.mysteryWord {
-            theGame.wordProgress.append("_")
-        }
-    }
-    
-    func isLetterAvailable(letter: String) -> Bool {
-        for availableLetters in theGame.availableLetter {
-            if String(availableLetters) == letter {
-                return true
-            }
-        }
-        return false
-    }
-    
-    func removeTheLetterInAvailable(letter: String) {
-        var newString = ""
-        for availableLetter in theGame.availableLetter {
-            if String(availableLetter) != letter {
-                newString += String(availableLetter)
-            }
-        }
-        theGame.availableLetter = newString
-    }
-    
-    func isTheLetterInTheWord(letter: String) -> Bool {
-        for mysteryLetter in theGame.mysteryWord {
-            if String(mysteryLetter) == letter {
-               return true
-            }
-        }
-        return false
-    }
-    
-    func updateProgress(letter: String) {
-        var letterToAdd = [Character]()
-        var indexToAdd = [Int]()
-        var index = 0
-        for mysteryLetter in theGame.mysteryWord {
-            if String(mysteryLetter) == letter {
-                letterToAdd += letter
-                indexToAdd.append(index)
-            }
-            index += 1
-        }
-        var newString = ""
-        index = 0
-        var nextIndex = 0
-        for progressLetter in theGame.wordProgress {
-            if progressLetter != "_" {
-                newString += String(progressLetter)
-            } else if index == indexToAdd[nextIndex] {
-                newString += String(letterToAdd[nextIndex])
-                nextIndex += 1
-            } else {
-                newString += "_"
-            }
-            index += 1
-        }
-        theGame.wordProgress = newString
-    }
 }
-
