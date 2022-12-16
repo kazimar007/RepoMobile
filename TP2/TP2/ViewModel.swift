@@ -17,5 +17,7 @@ struct GameData {
     var secret = ""
     var nextSecret = ""
     
+    var top1 = ""
+    var nextTop1 = ""
     var highScore = [""]
 }

@@ -32,8 +32,11 @@ class APIController {
                 do {
                     let dataGetWord = try JSONDecoder().decode(DataGetWord.self, from: data)
                     DispatchQueue.main.async {
-                        theGame.nextWord = dataGetWord.word.uppercased()
+                        theGame.nextWord = dataGetWord.word.uppercased().folding(options: .diacriticInsensitive, locale: .current)
+
                         theGame.nextSecret = dataGetWord.secret
+                        
+                        APIController.setTop1(word: theGame.nextWord)
                     }
                 }
                 catch{}
@@ -98,6 +101,46 @@ class APIController {
                 }
                 catch{
                     theGame.highScore = []
+                }
+            }
+        })
+        task.resume()
+    }
+    
+    static func setTop1(word: String) {
+        let newWord = word.replacingOccurrences(of: " ", with: "%20", options: .literal, range: nil).folding(options: .diacriticInsensitive, locale: .current)
+        let urlString: String = "https://bonhomme.drynish.duckdns.org/highScore/" + newWord
+        guard let url = URL(string: urlString) else {
+            print("Error: cannot create URL")
+            return
+        }
+        let urlRequest = URLRequest(url: url)
+        
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: urlRequest, completionHandler:
+            { (data: Data?, response:URLResponse?, error:Error?) in
+            if let error = error {
+                print(error)
+            }
+            
+            if let response=response {
+                print(response)
+            }
+            
+            if let data=data {
+                do {
+                    let dataHighScore = try JSONDecoder().decode([DataHighScore].self, from: data)
+                    DispatchQueue.main.async {
+                        if dataHighScore.count == 0 {
+                            theGame.nextTop1 = "Mot non trouve"
+                        } else {
+                            theGame.nextTop1 = dataHighScore.last!.player + " : " + dataHighScore.last!.score
+                        }
+                    }
+                }
+                catch{
+                    theGame.nextTop1 = "Mot non trouve"
                 }
             }
         })

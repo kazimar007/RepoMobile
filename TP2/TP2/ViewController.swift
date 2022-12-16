@@ -11,6 +11,7 @@ var gameController = GameController()
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var labTOP1: UILabel!
     @IBOutlet weak var labWordToFind: UILabel!
     @IBOutlet weak var txfLetterEntry: UITextField!
     @IBOutlet weak var labAllLetter1: UILabel!
@@ -24,14 +25,14 @@ class ViewController: UIViewController {
         gameController.setWord()
     }
     
-    @IBAction func btnHighScorePressed(_ sender: Any) {
-    }
+    @IBAction func btnHighScorePressed(_ sender: Any) {}
     @IBAction func btnStartPressed(_ sender: Any) {
         if !txfUsername.text!.isEmpty && containsOnlyLetters(word: txfUsername.text!) {
             txfLetterEntry.placeholder = "Debut de la partie"
             gameController.setUsername(username: txfUsername.text!)
             gameController.resetGame()
             loadGameView()
+            labTOP1.text = "TOP 1 : " + theGame.top1
             btnStart.isEnabled = false
             txfUsername.isEnabled = false
             txfLetterEntry.isEnabled = true
