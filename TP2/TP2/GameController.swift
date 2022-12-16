@@ -107,8 +107,8 @@ class GameController {
         theGame.manStage = 1
         theGame.availableLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         
-        //theGame.mysteryWord = theGame.nextWord
         theGame.mysteryWord = theGame.nextWord.folding(options: .diacriticInsensitive, locale: .current)
+        theGame.secret = theGame.nextSecret
         setWord()
         
         theGame.wordProgress = ""

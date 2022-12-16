@@ -33,13 +33,10 @@ class APIController {
                     let dataGetWord = try JSONDecoder().decode(DataGetWord.self, from: data)
                     DispatchQueue.main.async {
                         theGame.nextWord = dataGetWord.word.uppercased()
+                        theGame.nextSecret = dataGetWord.secret
                     }
                 }
-                catch{
-                    DispatchQueue.main.async {
-                        theGame.nextWord = "ERREUR"
-                    }
-                }
+                catch{}
             }
         })
         task.resume()

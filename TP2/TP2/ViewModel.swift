@@ -9,8 +9,10 @@ import Foundation
 
 struct GameData {
     var manStage = 1
-    var availableLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    var mysteryWord = "Inconnue"
-    var wordProgress = "________"
+    var availableLetter = ""
+    var mysteryWord = ""
+    var wordProgress = ""
     var nextWord = ""
+    var secret = ""
+    var nextSecret = ""
 }
