@@ -42,8 +42,27 @@ class APIController {
         task.resume()
     }
     
-    static public func solveWord() {
+    static public func solveWord(secret: String, player: String, score: String) {
+        let urlString: String = "https://bonhomme.drynish.duckdns.org/solveWord/" + secret + "/" + player + "/" + score
+        guard let url = URL(string: urlString) else {
+          print("Error: cannot create URL")
+          return
+        }
+        let urlRequest = URLRequest(url: url)
         
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: urlRequest, completionHandler:
+            { (data: Data?, response:URLResponse?, error:Error?) in
+            if let error = error {
+                print(error)
+            }
+            
+            if let response=response {
+                print(response)
+            }
+        })
+        task.resume()
     }
     
     static public func setHighScoreArray(word: String) {

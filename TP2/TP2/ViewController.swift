@@ -31,6 +31,7 @@ class ViewController: UIViewController {
             txfLetterEntry.placeholder = "Entrer un nom d'utilisateur"
         } else {
             txfLetterEntry.placeholder = "Debut de la partie"
+            gameController.setUsername(username: txfUsername.text!)
             gameController.resetGame()
             loadGameView()
             btnStart.isEnabled = false

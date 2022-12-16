@@ -26,6 +26,7 @@ class GameController {
                 }
                 if isCompleted {
                     // Mot complete
+                    APIController.solveWord(secret: theGame.secret, player: theGame.username, score: String(theGame.manStage - 1))
                     return WIN
                 }
                 return GOOD_LETTER
@@ -123,5 +124,9 @@ class GameController {
     
     func setWord() {
         APIController.setWord()
+    }
+    
+    func setUsername(username: String) {
+        theGame.username = username
     }
 }

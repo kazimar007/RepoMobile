@@ -8,6 +8,7 @@
 import Foundation
 
 struct GameData {
+    var username = ""
     var manStage = 1
     var availableLetter = ""
     var mysteryWord = ""
