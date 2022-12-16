@@ -46,7 +46,38 @@ class APIController {
         
     }
     
-    static public func highScore() {
+    static public func setHighScoreArray(word: String) {
+        let urlString: String = "https://bonhomme.drynish.duckdns.org/highScore/" + word
+        guard let url = URL(string: urlString) else {
+            print("Error: cannot create URL")
+            return
+        }
+        let urlRequest = URLRequest(url: url)
         
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: urlRequest, completionHandler:
+            { (data: Data?, response:URLResponse?, error:Error?) in
+            if let error = error {
+                print(error)
+            }
+            
+            if let response=response {
+                print(response)
+            }
+            
+            if let data=data {
+                do {
+                    let dataHighScore = try JSONDecoder().decode([DataHighScore].self, from: data)
+                    DispatchQueue.main.async {
+                        for highScore in dataHighScore {
+                            theGame.highScore.append(highScore.player + " : " + highScore.score)
+                        }
+                    }
+                }
+                catch{}
+            }
+        })
+        task.resume()
     }
 }

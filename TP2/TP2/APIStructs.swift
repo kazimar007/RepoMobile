@@ -11,3 +11,8 @@ struct DataGetWord : Decodable {
     var word : String;
     var secret : String;
 }
+
+struct DataHighScore : Decodable {
+    var player : String
+    var score : String
+}

@@ -23,16 +23,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bienvenue au Bonhomme Pendu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZGE-6K-duV">
-                                <rect key="frame" x="39" y="536" width="314" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="txfLetterEntryEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="C62-65-WnH"/>
-                                    <action selector="txfLetterEntryValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="QbZ-ZT-1aB"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LH-mN-ddd">
                                 <rect key="frame" x="39" y="403" width="303" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -76,6 +66,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bienvenue au Bonhomme Pendu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZGE-6K-duV">
+                                <rect key="frame" x="39" y="536" width="314" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="txfLetterEntryEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="C62-65-WnH"/>
+                                    <action selector="txfLetterEntryValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="QbZ-ZT-1aB"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -111,6 +111,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="txfSearchEditingChanged:" destination="yHJ-w7-Haw" eventType="editingChanged" id="4X3-cQ-YoY"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVR-Gd-iN7">
                                         <rect key="frame" x="0.0" y="319" width="347" height="45"/>
@@ -126,6 +129,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Rechercher"/>
+                                        <connections>
+                                            <action selector="btnSearchPressed:" destination="yHJ-w7-Haw" eventType="touchUpInside" id="rMs-A1-RZR"/>
+                                        </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rzW-E3-fmC">
                                         <rect key="frame" x="0.0" y="39" width="347" height="287"/>
@@ -151,6 +157,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="rzW-E3-fmC" id="zcd-Lr-2LT"/>
+                        <outlet property="txfSearch" destination="3T8-hO-kgD" id="xmy-NM-MoP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0B-3n-DwA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -11,12 +11,23 @@ var names = [
 
 class PopupViewController: UIViewController {
 
+    @IBOutlet weak var txfSearch: UITextField!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    @IBAction func txfSearchEditingChanged(_ sender: Any) {
+        if !txfSearch.text!.trimmingCharacters(in: .whitespaces).isEmpty {
+            APIController.setHighScoreArray(word: txfSearch.text!)
+        }
+    }
+    
+    @IBAction func btnSearchPressed(_ sender: Any) {
+        
     }
     
     @IBAction func btnQuitterPressed(_ sender: Any) {
