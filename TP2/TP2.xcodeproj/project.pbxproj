@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C0245C382943991A001FF167 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0245C372943991A001FF167 /* APIController.swift */; };
+		C088E20A294C00E7007E04B4 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C088E209294C00E7007E04B4 /* PopupViewController.swift */; };
 		C093B2E4294A7E6800B6EFE7 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C093B2E3294A7E6800B6EFE7 /* GameController.swift */; };
 		C093B2E6294A7EE800B6EFE7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C093B2E5294A7EE800B6EFE7 /* ViewModel.swift */; };
 		C093B2E8294A86C200B6EFE7 /* Constante.swift in Sources */ = {isa = PBXBuildFile; fileRef = C093B2E7294A86C200B6EFE7 /* Constante.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		C0245C372943991A001FF167 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		C088E209294C00E7007E04B4 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		C093B2E3294A7E6800B6EFE7 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		C093B2E5294A7EE800B6EFE7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		C093B2E7294A86C200B6EFE7 /* Constante.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constante.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				C093B2E5294A7EE800B6EFE7 /* ViewModel.swift */,
 				C093B2E7294A86C200B6EFE7 /* Constante.swift */,
 				C093B2E9294A9EFD00B6EFE7 /* APIStructs.swift */,
+				C088E209294C00E7007E04B4 /* PopupViewController.swift */,
 			);
 			path = TP2;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				C0ABBA1B293113E900466076 /* ViewController.swift in Sources */,
 				C0ABBA17293113E900466076 /* AppDelegate.swift in Sources */,
 				C093B2E8294A86C200B6EFE7 /* Constante.swift in Sources */,
+				C088E20A294C00E7007E04B4 /* PopupViewController.swift in Sources */,
 				C093B2EA294A9EFD00B6EFE7 /* APIStructs.swift in Sources */,
 				C093B2E6294A7EE800B6EFE7 /* ViewModel.swift in Sources */,
 				C0ABBA19293113E900466076 /* SceneDelegate.swift in Sources */,
