@@ -56,7 +56,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="HighScore"/>
                                 <connections>
-                                    <action selector="btnHighScorePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PfP-jS-vVJ"/>
+                                    <action selector="btnHighScorePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lPL-bH-SrA"/>
                                     <segue destination="yHJ-w7-Haw" kind="presentation" id="duM-mB-1tc"/>
                                 </connections>
                             </button>

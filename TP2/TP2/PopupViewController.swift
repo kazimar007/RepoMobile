@@ -17,6 +17,17 @@ class PopupViewController: UIViewController, UITextFieldDelegate {
         tableView.dataSource = self
         
         self.txfSearch.delegate = self
+        
+        var isCompleted = true
+        for letter in theGame.wordProgress {
+            if letter == "_" {
+                isCompleted = false
+            }
+        }
+        if isCompleted {
+            txfSearch.text = theGame.mysteryWord
+            APIController.setHighScoreArray(word: txfSearch.text!)
+        }
     }
     
     @IBAction func txfSearchEditingChanged(_ sender: Any) {

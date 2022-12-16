@@ -27,9 +27,7 @@ class ViewController: UIViewController {
     @IBAction func btnHighScorePressed(_ sender: Any) {
     }
     @IBAction func btnStartPressed(_ sender: Any) {
-        if txfUsername.text!.trimmingCharacters(in: .whitespaces).isEmpty {
-            txfLetterEntry.placeholder = "Entrer un nom d'utilisateur"
-        } else {
+        if !txfUsername.text!.isEmpty && containsOnlyLetters(word: txfUsername.text!) {
             txfLetterEntry.placeholder = "Debut de la partie"
             gameController.setUsername(username: txfUsername.text!)
             gameController.resetGame()
@@ -37,6 +35,8 @@ class ViewController: UIViewController {
             btnStart.isEnabled = false
             txfUsername.isEnabled = false
             txfLetterEntry.isEnabled = true
+        } else {
+            txfLetterEntry.placeholder = "Entrer un nom d'utilisateur"
         }
     }
     @IBAction func txfLetterEntryEditingChanged(_ sender: Any) {
@@ -95,5 +95,14 @@ class ViewController: UIViewController {
                 labWordToFind.text? += String(letter) + " "
             }
         }
+    }
+    
+    func containsOnlyLetters(word: String) -> Bool {
+        for chr in word {
+            if (!(chr >= "a" && chr <= "z") && !(chr >= "A" && chr <= "Z")) {
+                return false
+            }
+        }
+        return true
     }
 }
