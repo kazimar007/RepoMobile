@@ -72,7 +72,7 @@ class APIController {
                     let dataHighScore = try JSONDecoder().decode([DataHighScore].self, from: data)
                     DispatchQueue.main.async {
                         theGame.highScore = []
-                        for highScore in dataHighScore {
+                        for highScore in dataHighScore.reversed() {
                             theGame.highScore.append(highScore.player + " : " + highScore.score)
                         }
                     }
