@@ -23,7 +23,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bienvenue au Bonhomme Pendu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZGE-6K-duV">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bienvenue au Bonhomme Pendu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZGE-6K-duV">
                                 <rect key="frame" x="39" y="536" width="314" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -70,6 +70,12 @@
                                     <segue destination="yHJ-w7-Haw" kind="presentation" id="duM-mB-1tc"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Entrer votre nom d'utilisateur" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JjS-kt-Avd">
+                                <rect key="frame" x="79" y="784" width="234" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -81,11 +87,12 @@
                         <outlet property="labAllLetter2" destination="HBP-GP-Lf0" id="MbJ-m4-M7x"/>
                         <outlet property="labWordToFind" destination="7LH-mN-ddd" id="jGB-x8-zTf"/>
                         <outlet property="txfLetterEntry" destination="ZGE-6K-duV" id="grg-gJ-ozK"/>
+                        <outlet property="txfUsername" destination="JjS-kt-Avd" id="DAP-Ak-gSV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-883" y="17"/>
+            <point key="canvasLocation" x="-883.20610687022895" y="16.901408450704228"/>
         </scene>
         <!--Popup View Controller-->
         <scene sceneID="1aI-Fs-az1">

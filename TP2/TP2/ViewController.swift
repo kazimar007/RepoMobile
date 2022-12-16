@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var txfLetterEntry: UITextField!
     @IBOutlet weak var labAllLetter1: UILabel!
     @IBOutlet weak var labAllLetter2: UILabel!
+    @IBOutlet weak var txfUsername: UITextField!
     @IBOutlet weak var imgBody: UIImageView!
     
     @IBOutlet weak var btnStart: UIButton!
@@ -26,11 +27,16 @@ class ViewController: UIViewController {
     @IBAction func btnHighScorePressed(_ sender: Any) {
     }
     @IBAction func btnStartPressed(_ sender: Any) {
-        txfLetterEntry.placeholder = "Debut de la partie"
-        gameController.resetGame()
-        loadGameView()
-        btnStart.isEnabled = false
-        txfLetterEntry.isEnabled = true
+        if txfUsername.text!.trimmingCharacters(in: .whitespaces).isEmpty {
+            txfLetterEntry.placeholder = "Entrer un nom d'utilisateur"
+        } else {
+            txfLetterEntry.placeholder = "Debut de la partie"
+            gameController.resetGame()
+            loadGameView()
+            btnStart.isEnabled = false
+            txfUsername.isEnabled = false
+            txfLetterEntry.isEnabled = true
+        }
     }
     @IBAction func txfLetterEntryEditingChanged(_ sender: Any) {
         let status = gameController.letterEntry(entry: txfLetterEntry.text!)
@@ -49,12 +55,14 @@ class ViewController: UIViewController {
             loadGameView()
             txfLetterEntry.placeholder = "Vous avez perdu"
             btnStart.isEnabled = true
+            txfUsername.isEnabled = true
             txfLetterEntry.isEnabled = false
             break
         case WIN:
             loadGameView()
             txfLetterEntry.placeholder = "Vous avez gagne"
             btnStart.isEnabled = true
+            txfUsername.isEnabled = true
             txfLetterEntry.isEnabled = false
             break
         case UNAVAILABLE_LETTER:
