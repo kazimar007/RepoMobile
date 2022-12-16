@@ -47,7 +47,8 @@ class APIController {
     }
     
     static public func setHighScoreArray(word: String) {
-        let urlString: String = "https://bonhomme.drynish.duckdns.org/highScore/" + word
+        let newWord = word.replacingOccurrences(of: " ", with: "%20", options: .literal, range: nil).folding(options: .diacriticInsensitive, locale: .current)
+        let urlString: String = "https://bonhomme.drynish.duckdns.org/highScore/" + newWord
         guard let url = URL(string: urlString) else {
             print("Error: cannot create URL")
             return
@@ -70,12 +71,15 @@ class APIController {
                 do {
                     let dataHighScore = try JSONDecoder().decode([DataHighScore].self, from: data)
                     DispatchQueue.main.async {
+                        theGame.highScore = []
                         for highScore in dataHighScore {
                             theGame.highScore.append(highScore.player + " : " + highScore.score)
                         }
                     }
                 }
-                catch{}
+                catch{
+                    theGame.highScore = []
+                }
             }
         })
         task.resume()

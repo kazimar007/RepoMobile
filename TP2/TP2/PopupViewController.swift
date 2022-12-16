@@ -6,18 +6,17 @@
 //
 
 import UIKit
-var names = [
-    "asd", "asdas"]
 
-class PopupViewController: UIViewController {
+class PopupViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var txfSearch: UITextField!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
         tableView.dataSource = self
+        
+        self.txfSearch.delegate = self
     }
     
     @IBAction func txfSearchEditingChanged(_ sender: Any) {
@@ -27,25 +26,31 @@ class PopupViewController: UIViewController {
     }
     
     @IBAction func btnSearchPressed(_ sender: Any) {
-        
+        tableView.reloadData()
     }
     
     @IBAction func btnQuitterPressed(_ sender: Any) {
         dismiss(animated: true)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        tableView.reloadData()
+        return true
+    }
 }
 
-extension PopupViewController: UITableViewDelegate{}
 
 extension PopupViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+        
+        return theGame.highScore.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.text = names[indexPath.row]
+        cell.textLabel?.text = theGame.highScore[indexPath.row]
         
         return cell
     }
