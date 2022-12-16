@@ -51,11 +51,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elC-B2-pjz">
+                                <rect key="frame" x="79" y="732" width="101" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start"/>
+                                <connections>
+                                    <action selector="btnStartPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="inW-2v-Y5o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGc-7A-CVQ">
+                                <rect key="frame" x="209" y="732" width="104" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="HighScore"/>
+                                <connections>
+                                    <action selector="btnHighScorePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PfP-jS-vVJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="btnStart" destination="elC-B2-pjz" id="YYI-aH-SGN"/>
                         <outlet property="imgBody" destination="NvG-yK-Tyy" id="yfd-AQ-S2p"/>
                         <outlet property="labAllLetter1" destination="nKd-SX-dZS" id="Fmr-qZ-OL2"/>
                         <outlet property="labAllLetter2" destination="HBP-GP-Lf0" id="MbJ-m4-M7x"/>

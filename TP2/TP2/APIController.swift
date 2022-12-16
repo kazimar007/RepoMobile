@@ -8,7 +8,7 @@
 import Foundation
 
 class APIController {
-    static public func getWord() {
+    static public func setWord() {
         let urlString: String = "https://bonhomme.drynish.duckdns.org/getWord"
         guard let url = URL(string: urlString) else {
           print("Error: cannot create URL")
@@ -32,12 +32,12 @@ class APIController {
                 do {
                     var dataGetWord = try JSONDecoder().decode(DataGetWord.self, from: data)
                     DispatchQueue.main.async {
-                        theGame.mysteryWord = dataGetWord.word
+                        theGame.nextWord = dataGetWord.word
                     }
                 }
                 catch{
                     DispatchQueue.main.async {
-                        theGame.mysteryWord = "Erreur"
+                        theGame.nextWord = "Erreur"
                     }
                 }
             }

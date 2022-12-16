@@ -12,4 +12,5 @@ struct GameData {
     var availableLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     var mysteryWord = "Inconnue"
     var wordProgress = "________"
+    var nextWord = ""
 }

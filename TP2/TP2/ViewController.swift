@@ -17,12 +17,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var labAllLetter2: UILabel!
     @IBOutlet weak var imgBody: UIImageView!
     
+    @IBOutlet weak var btnStart: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        gameController.setWord()
+    }
+    
+    @IBAction func btnHighScorePressed(_ sender: Any) {
+    }
+    @IBAction func btnStartPressed(_ sender: Any) {
         gameController.resetGame()
         loadGameView()
     }
-    
     @IBAction func txfLetterEntryEditingChanged(_ sender: Any) {
         let status = gameController.letterEntry(entry: txfLetterEntry.text!)
         txfLetterEntry.text = ""
@@ -64,7 +70,7 @@ class ViewController: UIViewController {
             }
         }
         imgBody.image = UIImage(named: "manStage" + String(theGame.manStage) + ".png")
-        
+            
         labWordToFind.text = ""
         for letter in theGame.wordProgress {
             labWordToFind.text? += String(letter) + " "

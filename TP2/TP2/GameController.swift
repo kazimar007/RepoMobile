@@ -109,10 +109,17 @@ class GameController {
         theGame.manStage = 1
         theGame.availableLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         //theGame.mysteryWord = wordBank.randomElement()!.uppercased()
-        APIController.getWord()
+        //APIController.getWord()
+        theGame.mysteryWord = theGame.nextWord
+        setWord()
+        
         theGame.wordProgress = ""
         for _ in theGame.mysteryWord {
             theGame.wordProgress.append("_")
         }
+    }
+    
+    func setWord() {
+        APIController.setWord()
     }
 }
