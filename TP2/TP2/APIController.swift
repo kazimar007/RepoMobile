@@ -30,14 +30,14 @@ class APIController {
             
             if let data=data {
                 do {
-                    var dataGetWord = try JSONDecoder().decode(DataGetWord.self, from: data)
+                    let dataGetWord = try JSONDecoder().decode(DataGetWord.self, from: data)
                     DispatchQueue.main.async {
-                        theGame.nextWord = dataGetWord.word
+                        theGame.nextWord = dataGetWord.word.uppercased()
                     }
                 }
                 catch{
                     DispatchQueue.main.async {
-                        theGame.nextWord = "Erreur"
+                        theGame.nextWord = "ERREUR"
                     }
                 }
             }

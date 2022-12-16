@@ -26,8 +26,11 @@ class ViewController: UIViewController {
     @IBAction func btnHighScorePressed(_ sender: Any) {
     }
     @IBAction func btnStartPressed(_ sender: Any) {
+        txfLetterEntry.placeholder = "Debut de la partie"
         gameController.resetGame()
         loadGameView()
+        btnStart.isEnabled = false
+        txfLetterEntry.isEnabled = true
     }
     @IBAction func txfLetterEntryEditingChanged(_ sender: Any) {
         let status = gameController.letterEntry(entry: txfLetterEntry.text!)
@@ -45,10 +48,14 @@ class ViewController: UIViewController {
         case LOSE:
             loadGameView()
             txfLetterEntry.placeholder = "Vous avez perdu"
+            btnStart.isEnabled = true
+            txfLetterEntry.isEnabled = false
             break
         case WIN:
             loadGameView()
             txfLetterEntry.placeholder = "Vous avez gagne"
+            btnStart.isEnabled = true
+            txfLetterEntry.isEnabled = false
             break
         case UNAVAILABLE_LETTER:
             txfLetterEntry.placeholder = "La lettre n'est pas disponible"
@@ -73,7 +80,11 @@ class ViewController: UIViewController {
             
         labWordToFind.text = ""
         for letter in theGame.wordProgress {
-            labWordToFind.text? += String(letter) + " "
+            if String(letter) == "|" {
+                labWordToFind.text? += "  "
+            } else {
+                labWordToFind.text? += String(letter) + " "
+            }
         }
     }
 }

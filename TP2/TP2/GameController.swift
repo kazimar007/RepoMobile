@@ -7,8 +7,6 @@
 
 import Foundation
 
-var wordBank = ["Os", "Marteau", "Atelier", "Ceinture", "Incroyable"]
-
 var theGame = GameData()
 
 class GameController {
@@ -28,7 +26,6 @@ class GameController {
                 }
                 if isCompleted {
                     // Mot complete
-                    resetGame()
                     return WIN
                 }
                 return GOOD_LETTER
@@ -36,6 +33,7 @@ class GameController {
                 // Mauvaise lettre
                 theGame.manStage += 1
                 if theGame.manStage >= 7 {
+                    theGame.wordProgress = theGame.mysteryWord
                     return LOSE
                 }
                 return WRONG_LETTER
@@ -108,14 +106,18 @@ class GameController {
     func resetGame() {
         theGame.manStage = 1
         theGame.availableLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        //theGame.mysteryWord = wordBank.randomElement()!.uppercased()
-        //APIController.getWord()
-        theGame.mysteryWord = theGame.nextWord
+        
+        //theGame.mysteryWord = theGame.nextWord
+        theGame.mysteryWord = theGame.nextWord.folding(options: .diacriticInsensitive, locale: .current)
         setWord()
         
         theGame.wordProgress = ""
-        for _ in theGame.mysteryWord {
-            theGame.wordProgress.append("_")
+        for letter in theGame.mysteryWord {
+            if String(letter) == " " {
+                theGame.wordProgress.append("|")
+            } else {
+                theGame.wordProgress.append("_")
+            }
         }
     }
     
